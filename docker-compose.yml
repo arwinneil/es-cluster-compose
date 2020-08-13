@@ -48,7 +48,7 @@ services:
     environment:
       - EVENTSTORE_EXT_HOST_ADVERTISE_AS=node2.eventstore
       - EVENTSTORE_INT_HOST_ADVERTISE_AS=node2.eventstore
-      - EVENTSTORE_GOSSIP_SEED=eventstore.node1:2113,node3.eventstore:2113
+      - EVENTSTORE_GOSSIP_SEED=node1.eventstore:2113,node3.eventstore:2113
       - EVENTSTORE_CERTIFICATE_FILE=/certs/node2/node.crt
       - EVENTSTORE_CERTIFICATE_PRIVATE_KEY_FILE=/certs/node2/node.key
     healthcheck:
@@ -69,7 +69,7 @@ services:
     environment:
       - EVENTSTORE_EXT_HOST_ADVERTISE_AS=node3.eventstore
       - EVENTSTORE_INT_HOST_ADVERTISE_AS=node3.eventstore
-      - EVENTSTORE_GOSSIP_SEED=eventstore.node1:2113,node2.eventstore:2113
+      - EVENTSTORE_GOSSIP_SEED=node1.eventstore:2113,node2.eventstore:2113
       - EVENTSTORE_CERTIFICATE_FILE=/certs/node3/node.crt
       - EVENTSTORE_CERTIFICATE_PRIVATE_KEY_FILE=/certs/node3/node.key
     healthcheck:
